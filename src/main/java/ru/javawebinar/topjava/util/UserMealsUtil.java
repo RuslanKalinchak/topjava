@@ -59,7 +59,7 @@ public class UserMealsUtil {
         List<UserMealWithExcess> userMealWithExcessList = meals.stream()
                 .filter(t->TimeUtil.isBetweenHalfOpen(t.getDateTime().toLocalTime(), startTime, endTime))
                 .map(t-> {
-                    return new UserMealWithExcess(t.getDateTime(), t.getDescription(), t.getCalories(),  meals.stream().mapToInt(p->p.getCalories()).sum() > caloriesPerDay);
+                    return new UserMealWithExcess(t.getDateTime(), t.getDescription(), t.getCalories(),  meals.stream().mapToInt(a->a.getCalories()).sum() > caloriesPerDay);
                 })
                 .collect(Collectors.toList());
 
