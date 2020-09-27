@@ -45,8 +45,6 @@ public class UserMealsUtil {
        }
 
        return userMealToUserMealWithExcess(filteredUserMealList, excess);
-
-        // TODO return filtered list with excess. Implement by cycles
     }
 
     public static List<UserMealWithExcess> userMealToUserMealWithExcess(List<UserMeal> userMealList, boolean excess){
@@ -65,7 +63,6 @@ public class UserMealsUtil {
                 })
                 .collect(Collectors.toList());
 
-        // TODO Implement by streams
         return userMealWithExcessList;
     }
 
