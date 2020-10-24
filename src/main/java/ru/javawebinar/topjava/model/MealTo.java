@@ -1,9 +1,7 @@
 package ru.javawebinar.topjava.model;
 
-import org.springframework.stereotype.Component;
-
 import java.time.LocalDateTime;
-@Component
+
 public class MealTo {
     private long mealId;
 
@@ -82,5 +80,4 @@ public class MealTo {
                 ", excess=" + excess +
                 '}';
     }
-
 }
